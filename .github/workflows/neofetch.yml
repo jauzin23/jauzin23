@@ -16,6 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # You can toggle any of these modules on or off!
+          ascii_path: ".github/ascii.txt"
           os: "Windows 11"
           ide: "VS Code"
           show_os: "true"
