@@ -1,7 +1,7 @@
 name: Generate Neofetch Card
 on:
   schedule:
-    - cron: '0 0 * * *' # Updates your stats every day automatically!
+    - cron: "0 0 * * *" # Updates your stats every day automatically!
   workflow_dispatch: # Lets you trigger it manually anytime
 
 jobs:
@@ -26,3 +26,7 @@ jobs:
           show_stars: "true"
           show_commits: "true"
           show_followers: "true"
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update card
