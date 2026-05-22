@@ -27,6 +27,9 @@ jobs:
           show_stars: "true"
           show_commits: "true"
           show_followers: "true"
+      - name: Bust Image Cache
+        run: |
+          sed -i -E "s/neofetch\.svg(\?v=[0-9]+)?/neofetch.svg?v=$(date +%s)/g" README.md
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
