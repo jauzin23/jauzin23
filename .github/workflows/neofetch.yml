@@ -1,0 +1,26 @@
+name: Generate Neofetch Card
+on:
+  schedule:
+    - cron: '0 0 * * *' # Updates your stats every day automatically!
+  workflow_dispatch: # Lets you trigger it manually anytime
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jauzin23/ReadNeo@v1
+        with:
+          # You can toggle any of these modules on or off!
+          os: "Windows 11"
+          ide: "VS Code"
+          show_os: "true"
+          show_uptime: "true"
+          show_ide: "true"
+          show_languages: "true"
+          show_repos: "true"
+          show_stars: "true"
+          show_commits: "true"
+          show_followers: "true"
