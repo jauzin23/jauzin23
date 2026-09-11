@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./neofetch.svg?v=1789005896" alt="Neofetch Profile" />
+  <img src="./neofetch.svg?v=1789092169" alt="Neofetch Profile" />
 </div>
